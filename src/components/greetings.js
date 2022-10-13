@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchMessages } from "../redux/configureStore";
-import Salutation from "./salutaion";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchMessages } from '../redux/configureStore';
+import Salutation from './salutation';
+
 const Greeting = () => {
-  const messages = useSelector((state) => state.message)
+  const messages = useSelector((state) => state.message);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -17,7 +18,7 @@ const Greeting = () => {
         messages.map((msg) => <Salutation key={msg.id} content={msg.content} />)
       }
     </div>
-  )
-}
+  );
+};
 
 export default Greeting;
