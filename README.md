@@ -13,7 +13,7 @@ Now that I am familiar with Rails and React, in this project I had to put them t
 
 (Not available)
 
-The front-end App can be found [here](https://github.com/christianbiring1/hello_react_front-end)
+The back-end App can be found [here](https://github.com/christianbiring1/hello_rails_back-end/tree/develop)
 
 ### Prerequisites
 
