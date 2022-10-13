@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const BASEURL = 'https://chris-react-on-rails-backend.herokuapp.com/api/v1/messages';
+const BASEURL = 'http://127.0.0.1:3001/api/v1/messages';
 const GET_MESSAGE = 'react/redux/GET_MESSAGE';
 
 const getMessage = (messages) => ({
