@@ -2,7 +2,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import axios from "axios";
 
 
-const BASEURL = 'localhost:3001/api/v1/messages';
+const BASEURL = 'http://127.0.0.1:3001/api/v1/messages';
 const GET_MESSAGE = 'react/redux/GET_MESSAGE'
 
 const getMessage = (messages) => {
@@ -17,9 +17,10 @@ export const fetchMessages = () => async (dispatch) => {
   const response = await axios.get(BASEURL);
   const messageData = await response.data;
   messageData.forEach((msg) => {
-    messages.push(msg.content);
+    messages.push(msg);
   })
-  dispatch(getMessage(messages))
+  dispatch(getMessage(messages));
+  console.log(messages);
 }
 
 const MessageReducer = (state = [], action) => {
@@ -37,3 +38,5 @@ const rootReducer = combineReducers({
 
 const store = configureStore({ reducer: rootReducer });
 export default store;
+
+console.log(store);
